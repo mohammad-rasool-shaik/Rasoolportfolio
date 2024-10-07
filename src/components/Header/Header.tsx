@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 
-import CV from '../../assets/rasool 2024.pdf'
 export function Header() {
   const [isActive, setActive] = useState(false)
 
@@ -48,7 +47,7 @@ export function Header() {
           {/* <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink> */}
-          <a href="https://drive.google.com/file/d/1JHkoKJUktESfU4Og-KGmOotdxdIC3yHA/view?usp=sharing" className="button" target='_blank'>
+          <a href="https://drive.google.com/file/d/1JHkoKJUktESfU4Og-KGmOotdxdIC3yHA/view?usp=sharing" className="button" target='_blank' rel="noreferrer">
             CV
           </a>
         </nav>
