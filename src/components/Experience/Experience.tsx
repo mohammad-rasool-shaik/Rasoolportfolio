@@ -20,9 +20,9 @@ function Experience() {
     const timeline = [
         {
             icon: workIcon,
-            date: '2023, August - present',
-            title: 'SOFTWARE ENGINEER',
-            subtitle: 'AADVI TECH.SOLUTIONS',
+            date: 'August 2023 - present',
+            title: 'ASSOCIATE SOFTWARE ENGINEER',
+            subtitle: 'AADVI TECH SOLUTIONS',
             desc: 'JavaScript, MERN stack developer, UI(User Interface) design, Postman API ,MySQL, Git/GitHub, Docker,',
         },
 

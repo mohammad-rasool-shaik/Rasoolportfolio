@@ -8,48 +8,48 @@ import jsIcon from "../../assets/js-icon.svg";
 import nodeIcon from "../../assets/node-icon.svg";
 import reactIcon from "../../assets/react-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
-import boostrapIcon from "../../assets/bootstrap-icon.svg";
+import bootstrapIcon from "../../assets/bootstrap-icon.svg";
 
 export function About() {
   return (
     <Container id="about">
       <div className="about-text">
-        <h2>About me</h2>
+        <h2>About Me</h2>
         <p>
-          Hi there! I'm Mohammad Rasool, a website developer with a passion for creating custom online experiences for my clients. With a skill set including HTML, CSS, JavaScript, and React, I have the tools to bring any website vision to life.
+          Hi there! I'm Mohammad Rasool, a Full Stack Software Developer based in Hyderabad, India. I specialize in creating robust and user-friendly web applications using technologies such as JavaScript, React.js, Node.js, and REST APIs. My passion lies in delivering custom online experiences tailored to my clients' needs.
         </p>
         <p style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-          Gained handful of experience working as a software developer . I love creating projects that explore new things and have better functionalities, you can check out some of my work in the projects section
+          I have gained hands-on experience working as a software developer and love tackling projects that push my boundaries. You can explore some of my work in the projects section.
         </p>
         <p>
-          I am open to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the footer.
+          I am open to new collaborations and opportunities where I can contribute and grow. Feel free to connect with me; links are in the footer.
         </p>
 
         <h3>Here are my main skills:</h3>
         <div className="hard-skills">
           <div className="hability">
-            <img src={vscodeIcon} alt="vscode"/>
+            <img src={vscodeIcon} alt="Visual Studio Code" />
           </div>
           <div className="hability">
-            <img src={mysqlIcon} alt="mysql"/>
+            <img src={mysqlIcon} alt="MySQL" />
           </div>
           <div className="hability">
-            <img src={reactIcon} alt="React"/>
+            <img src={reactIcon} alt="React" />
           </div>
           <div className="hability">
-            <img src={typescriptIcon} alt="Typescript"/>
+            <img src={typescriptIcon} alt="TypeScript" />
           </div>
           <div className="hability">
-            <img src={nodeIcon} alt="Node"/>
+            <img src={nodeIcon} alt="Node.js" />
           </div>
           <div className="hability">
-            <img src={htmlIcon} alt="Html"/>
+            <img src={htmlIcon} alt="HTML" />
           </div>
           <div className="hability">
-            <img src={cssIcon} alt="Css"/>
+            <img src={cssIcon} alt="CSS" />
           </div>
           <div className="hability">
-            <img src={boostrapIcon} alt="Bootstrap" />
+            <img src={bootstrapIcon} alt="Bootstrap" />
           </div>
           <div className="hability">
             <img src={jsIcon} alt="JavaScript" />
@@ -60,5 +60,5 @@ export function About() {
         <img src={Rasool} alt="Rasool" />
       </div>
     </Container>
-  )
+  );
 }
