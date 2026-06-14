@@ -20,12 +20,46 @@ function Experience() {
     const timeline = [
         {
             icon: workIcon,
-            date: 'August 2023 - present',
-            title: 'ASSOCIATE SOFTWARE ENGINEER',
-            subtitle: 'AADVI TECH SOLUTIONS',
-            desc: 'JavaScript, MERN stack developer, UI(User Interface) design, Postman API ,MySQL, Git/GitHub, Docker,',
+            date: 'July 2025 – Present',
+            title: 'SR. SOFTWARE ENGINEER',
+            subtitle: 'Max Trans Systems, Hyderabad',
+            tech: 'NestJS, TypeScript, Redis, BullMQ, Azure, MSSQL, MySQL, Puppeteer, Playwright, PDF Processing, Docker',
+            highlights: [
+                'Led migration of legacy Node.js services into scalable NestJS-based modular architecture.',
+                'Designed event-driven workflows using Redis and BullMQ for report generation, invoice processing, and email automation.',
+                'Implemented distributed caching and rate-limiting strategies, reducing database load by 30%.',
+                'Built secure PDF generation, encryption, watermarking, merging, and document transformation services.',
+                'Developed bulk document processing pipelines and asynchronous job queues for CPU-intensive tasks.',
+                'Built workflow builders and dynamic page-builder functionality using Puck Editor and Rich Text Editor.',
+            ],
         },
-
+        {
+            icon: workIcon,
+            date: 'April 2025 - June 2025',
+            title: 'FREELANCE FULL-STACK ENGINEER',
+            subtitle: 'Nexg Works, Hyderabad',
+            tech: 'NestJS, FastAPI, OpenAI, Qdrant, PostgreSQL, Docker, AWS',
+            highlights: [
+                'Designed enterprise-grade authentication systems with JWT, 2FA, CSP policies, and security monitoring.',
+                'Built AI-powered document intelligence platform using RAG architecture, FastAPI, OpenAI, and vector databases.',
+                'Automated deployment pipelines and infrastructure provisioning.',
+                'Developed cloud-native APIs and integrations for third-party services.',
+            ],
+        },
+        {
+            icon: workIcon,
+            date: 'August 2023 - March 2025',
+            title: 'SOFTWARE DEVELOPER',
+            subtitle: 'Aadvi Tech Solution, Hyderabad',
+            tech: 'React.js, Node.js, MongoDB, Express.js, MSSQL, AWS',
+            highlights: [
+                'Delivered multiple production applications using React, Node.js, NestJS, MongoDB, and SQL databases.',
+                'Built real-time features using WebSockets and event-driven architecture.',
+                'Improved application performance through state management, lazy loading, and caching techniques.',
+                'Optimized SEO and page performance using Server-Side Rendering and Static Site Generation.',
+                'Developed secure REST APIs and authentication systems.',
+            ],
+        },
     ];
 
     return (
@@ -35,14 +69,8 @@ function Experience() {
             <div  style={{paddingLeft:'0%', width:'100%',minHeight:'30vh', display:'flex',justifyContent:'center',alignItems:'center'}} >
                 <VerticalTimeline layout="1-column">
                     {timeline.map((t, i) => {
-                        const contentStyle =
-            i === 0
-                ? { background: '#e31f71', color: '#fff' }
-                : undefined;
-                        const arrowStyle =
-            i === 0
-                ? { borderRight: '7px solid  rgb(33, 150, 243)' }
-                : undefined;
+                        const contentStyle = { background: '#e31f71', color: '#fff' };
+                        const arrowStyle = { borderRight: '7px solid #e31f71' };
 
                         return (
               
@@ -62,7 +90,18 @@ function Experience() {
                                                 {t.subtitle}
                                             </h4>
                                         )}
-                                        {t.desc && <p>{t.desc}</p>}
+                                        {t.tech && (
+                                            <p style={{ fontSize: '0.85rem', fontStyle: 'italic', marginBottom: '0.75rem' }}>
+                                                {t.tech}
+                                            </p>
+                                        )}
+                                        {t.highlights && (
+                                            <ul style={{ margin: 0, paddingLeft: '1.2rem' }}>
+                                                {t.highlights.map((item, j) => (
+                                                    <li key={j} style={{ marginBottom: '0.4rem' }}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </React.Fragment>
                                 ) : undefined}
                             </VerticalTimelineElement>

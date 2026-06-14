@@ -47,13 +47,30 @@ export const Container = styled.section`
         }
       }
       
+      .project-category {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.4rem 1rem;
+        border-radius: 2rem;
+        background-color: rgba(35, 206, 107, 0.15);
+        color: var(--green);
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+      }
+
       h3{
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
+        font-size: 2rem;
+        line-height: 1.3;
       }
 
       p{
-        letter-spacing: 0.12rem;
-        margin-bottom: 2rem;
+        letter-spacing: 0.08rem;
+        margin-bottom: 1.6rem;
+        line-height: 1.6;
+        opacity: 0.9;
+
         a{
           color: #FFFF;
           border-bottom: 1px solid var(--green);
@@ -64,14 +81,34 @@ export const Container = styled.section`
         }
       }
 
+      .project-highlights {
+        margin: 0 0 1.6rem;
+        padding-left: 1.6rem;
+        list-style: disc;
+
+        li {
+          margin-bottom: 0.6rem;
+          font-size: 1.4rem;
+          line-height: 1.5;
+          opacity: 0.85;
+        }
+      }
+
       footer{
         margin-top: auto;
         .tech-list{
           display: flex;
           align-items: center;
-          gap: 2rem;
-          font-size: 1.4rem;
-          opacity: 0.6;
+          flex-wrap: wrap;
+          gap: 0.8rem;
+          font-size: 1.2rem;
+          opacity: 0.85;
+
+          li {
+            padding: 0.4rem 0.9rem;
+            border-radius: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.08);
+          }
         }
       }
 

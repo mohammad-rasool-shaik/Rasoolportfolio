@@ -6,20 +6,67 @@ export const Container = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 
-  .hard-skills{
+  .main-tech-icons {
     margin-top: 1.6rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1.8rem;
+    gap: 2rem;
   }
-  .hability{
+
+  .tech-icon-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.6rem;
+    min-width: 6rem;
 
-    img{
-      width: 3.4rem;
+    svg {
+      font-size: 3.4rem;
+    }
+
+    span {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      text-align: center;
+    }
+  }
+
+  .skill-categories {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .skill-category h4 {
+    margin: 0 0 0.8rem;
+    font-size: 1.5rem;
+    color: var(--green);
+    letter-spacing: 0.05rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    background-color: var(--skill-tag-bg);
+    color: var(--skill-tag-color);
+    border: var(--skill-tag-border);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    transition: background-color 0.25s, color 0.25s;
+
+    &:hover {
+      background-color: var(--blue);
+      color: #ffffff;
+      border-color: transparent;
     }
   }
 
@@ -77,8 +124,13 @@ export const Container = styled.section`
     display: block;
     text-align: center;
     
-    .hard-skills{
+    .main-tech-icons,
+    .skill-tags {
       justify-content: center;
+    }
+
+    .skill-category {
+      text-align: center;
     }
     .about-image{
       display: flex;

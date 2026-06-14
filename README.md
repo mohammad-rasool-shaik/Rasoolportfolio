@@ -1,4 +1,4 @@
-# Portfolio of Mohammad Rasool
+# Portfolio of Shaik Rusum Mohammad Rasool
 
 
 ![portfolio](https://github.com/ras00786/Rasoolportfolio/assets/78201284/d3735118-f670-412a-905f-70dcf528a238)

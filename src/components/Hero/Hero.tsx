@@ -13,19 +13,19 @@ export function Hero() {
           <p>Hello <img src={Hello} alt="Hello" width="20px"/>, I'm</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
-          <h1>Mohammad Rasool</h1>
+          <h1>Shaik Rusum Mohammad Rasool</h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
-          <h3>Full Stack Developer</h3>
+          <h3>Senior Full-Stack Developer</h3>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
-          <p className="small-resume">1+ Year of Experience</p>
+          <p className="small-resume">3+ Years of Experience · Hyderabad, India</p>
         </ScrollAnimation>
 
 
         <ScrollAnimation animateIn="fadeInUp">
           <BrowserRouter>
-            <a href="https://www.linkedin.com/in/mohammad-rasool66/" className="button">Contact</a>
+            <a href="mailto:rasool84658@gmail.com" className="button">Contact</a>
           </BrowserRouter>
         </ScrollAnimation>
         

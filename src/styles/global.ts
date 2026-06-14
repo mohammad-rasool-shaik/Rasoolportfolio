@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     --black: #212121;
     --green: #23ce6b;
     --blue: #016fb9;
+    --skill-tag-bg: #2b2b2b;
+    --skill-tag-color: #ffffff;
+    --skill-tag-border: 1px solid transparent;
+    --nextjs-icon-color: #ffffff;
     scroll-padding-top: 10rem;
 
     &.light{
@@ -16,6 +20,11 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #f5f5f5;
         color: var(--black);
       }
+
+      --skill-tag-bg: #ffffff;
+      --skill-tag-color: var(--black);
+      --skill-tag-border: 1px solid rgba(0, 0, 0, 0.12);
+      --nextjs-icon-color: #000000;
 
       .logo{
         color: var(--black);

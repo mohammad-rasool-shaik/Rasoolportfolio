@@ -1,18 +1,29 @@
-import { Footer } from './components/Footer/Footer'
-import { Header } from './components/Header/Header'
-import { Main } from './components/Main/Main'
-import { GlobalStyle } from './styles/global'
-import 'react-toastify/dist/ReactToastify.css'
+import React from 'react';
+import { Footer } from './components/layout/Footer';
+import { Header } from './components/layout/Header';
+import { EducationExperience } from './components/sections/EducationExperience';
+import { Hero } from './components/sections/Hero';
+import { Projects } from './components/sections/Projects';
+import { Stats } from './components/sections/Stats';
+import { TechStack } from './components/sections/TechStack';
+import { ThemeProvider } from './context/ThemeContext';
+
 function App() {
   return (
-    <>
-    
-      <GlobalStyle></GlobalStyle>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
-    </>
-  )
+    <ThemeProvider>
+      <div className="min-h-screen bg-theme-bg text-theme-text transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          <Stats />
+          <TechStack />
+          <EducationExperience />
+          <Projects />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
