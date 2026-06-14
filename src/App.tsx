@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from './components/layout/Footer';
 import { Header } from './components/layout/Header';
+import { Capabilities } from './components/sections/Capabilities';
 import { EducationExperience } from './components/sections/EducationExperience';
 import { Hero } from './components/sections/Hero';
 import { Projects } from './components/sections/Projects';
@@ -17,6 +18,7 @@ function App() {
           <Hero />
           <Stats />
           <TechStack />
+          <Capabilities />
           <EducationExperience />
           <Projects />
         </main>

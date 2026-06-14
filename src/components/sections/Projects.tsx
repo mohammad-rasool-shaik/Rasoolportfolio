@@ -6,7 +6,7 @@ import { FadeIn } from '../ui/FadeIn';
 
 export function Projects() {
   return (
-    <section id="projects" className="py-14 lg:py-18">
+    <section id="projects" className="bg-theme-card/40 py-14 lg:py-18">
       <div className="section-container">
         <FadeIn className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-2xl font-bold text-primary sm:text-3xl">My Projects</h2>
@@ -47,9 +47,24 @@ export function Projects() {
 
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="font-bold text-theme-text">{project.title}</h3>
-                  <p className="mt-2 flex-1 text-xs leading-relaxed text-theme-muted lg:text-sm">
+                  <p className="mt-2 text-xs leading-relaxed text-theme-muted lg:text-sm">
                     {project.description}
                   </p>
+
+                  {project.features && (
+                    <ul className="mt-3 space-y-1">
+                      {project.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex gap-2 text-xs text-theme-muted"
+                        >
+                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {project.tech.map((t) => (
                       <span key={t} className="tag-pill-sm">
