@@ -7,7 +7,7 @@ export const personalInfo = {
   email: 'rasool84658@gmail.com',
   phone: '+91 8465848116',
   linkedin: 'https://www.linkedin.com/in/mohammad-rasool66/',
-  github: 'https://github.com/ras00786',
+  github: 'https://github.com/mohammad-rasool-shaik',
   resumeUrl:
     'https://drive.google.com/file/d/1EPUlF8jedeoLh_P9URl89twlM60K7M8b/view?usp=sharing',
   summary:

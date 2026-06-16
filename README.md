@@ -1,7 +1,7 @@
 # Portfolio of Shaik Rusum Mohammad Rasool
 
 
-![portfolio](https://github.com/ras00786/Rasoolportfolio/assets/78201284/d3735118-f670-412a-905f-70dcf528a238)
+![portfolio](https://github.com/mohammad-rasool-shaik/Rasoolportfolio/assets/78201284/d3735118-f670-412a-905f-70dcf528a238)
 
 
 This project was created with CRA (Create React App)
