@@ -11,14 +11,14 @@ export const personalInfo = {
   resumeUrl:
     'https://drive.google.com/file/d/1EPUlF8jedeoLh_P9URl89twlM60K7M8b/view?usp=sharing',
   summary:
-    'I design and build scalable SaaS platforms with invoice automation, Stripe payments, document processing pipelines, and cloud-native backends using NestJS, React, AWS, and Azure.',
+    'I design and build scalable SaaS platforms with third-party integrations — RingCentral (Fax/SMS), Epic & Cerner EHR, Stripe payments, Pusher real-time updates, invoice automation, and document processing pipelines using NestJS, React, AWS, and Azure.',
   about:
-    'Full-stack engineer specializing in enterprise SaaS — invoice generation, Stripe billing, bulk file processing, PDF pipelines, email workflows, and secure document management for high-volume production systems.',
+    'Full-stack engineer specializing in enterprise SaaS and healthcare integrations. Experienced building RingCentral fax/webhook systems, Epic and Cerner EHR connectors, Pusher-powered live notifications, Stripe billing, bulk file processing, PDF pipelines, and secure document management for high-volume production platforms.',
 };
 
 export const stats = [
   { label: 'Years Experience', value: 3, suffix: '+', icon: '💼' },
-  { label: 'Projects Completed', value: 5, suffix: '+', icon: '🚀' },
+  { label: 'Projects Completed', value: 6, suffix: '+', icon: '🚀' },
   { label: 'Technologies', value: 10, suffix: '+', icon: '⚡' },
   { label: 'Commitment', value: 100, suffix: '%', icon: '✨' },
 ];
@@ -27,8 +27,34 @@ export const capabilities: {
   title: string;
   description: string;
   tech: string[];
-  iconKey: 'invoice' | 'stripe' | 'files' | 'pdf' | 'upload' | 'email' | 'reports' | 'workflow' | 'security';
+  iconKey:
+    | 'invoice'
+    | 'stripe'
+    | 'files'
+    | 'pdf'
+    | 'upload'
+    | 'email'
+    | 'reports'
+    | 'workflow'
+    | 'security'
+    | 'ringcentral'
+    | 'ehr'
+    | 'realtime';
 }[] = [
+  {
+    title: 'RingCentral Integration',
+    description:
+      'OAuth 2.0 connect flows, fax send/receive, SMS webhooks, subscription management, and multi-tenant token storage with AES-256 encryption.',
+    tech: ['RingCentral API', 'NestJS', 'Webhooks', 'MySQL'],
+    iconKey: 'ringcentral',
+  },
+  {
+    title: 'Epic & Cerner EHR Integration',
+    description:
+      'Healthcare system integrations with Epic and Cerner — patient data workflows, document exchange, and secure API connectivity for enterprise platforms.',
+    tech: ['Epic', 'Cerner', 'FHIR', 'REST APIs'],
+    iconKey: 'ehr',
+  },
   {
     title: 'Invoice & Billing Automation',
     description:
@@ -72,11 +98,11 @@ export const capabilities: {
     iconKey: 'email',
   },
   {
-    title: 'Report Generation',
+    title: 'Real-Time with Pusher',
     description:
-      'Automated report building, scheduled exports, dashboard analytics, and data-driven reporting modules.',
-    tech: ['NestJS', 'Redis', 'MSSQL'],
-    iconKey: 'reports',
+      'Live dashboards, instant notifications, job status updates, and real-time UI sync using Pusher channels and events across NestJS backends and React frontends.',
+    tech: ['Pusher', 'WebSockets', 'NestJS', 'React'],
+    iconKey: 'realtime',
   },
   {
     title: 'Event-Driven Workflows',
@@ -84,13 +110,6 @@ export const capabilities: {
       'Async job queues and event-driven architectures for CPU-intensive tasks, invoice processing, and file automation.',
     tech: ['Redis', 'BullMQ', 'Kafka'],
     iconKey: 'workflow',
-  },
-  {
-    title: 'Authentication & Security',
-    description:
-      'Enterprise-grade auth with JWT, 2FA, rate limiting, CSP policies, and secure API architecture.',
-    tech: ['JWT', '2FA', 'NestJS'],
-    iconKey: 'security',
   },
 ];
 
@@ -105,19 +124,19 @@ export const techStack = [
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'NestJS', 'Express', 'GraphQL'],
+    items: ['Node.js', 'NestJS', 'Express', 'Pusher'],
   },
   {
     category: 'Database',
     items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQL Server'],
   },
   {
-    category: 'Cloud & DevOps',
-    items: ['AWS', 'Azure', 'Docker', 'CI/CD'],
+    category: 'Integrations',
+    items: ['RingCentral', 'Epic', 'Cerner', 'Stripe'],
   },
   {
-    category: 'Payments & Processing',
-    items: ['Stripe', 'BullMQ', 'Redis', 'Puppeteer'],
+    category: 'Cloud & DevOps',
+    items: ['AWS', 'Azure', 'Docker', 'CI/CD'],
   },
 ];
 
@@ -148,12 +167,13 @@ export const experiences = [
     duration: 'July 2025 – Present',
     accent: '#22C55E',
     highlights: [
+      'Built RingCentral integrations for fax, SMS, and webhook-based communication workflows.',
+      'Developed Epic and Cerner EHR integration modules for healthcare document and data exchange.',
       'Built invoice generation and automated billing systems used by enterprise customers.',
       'Integrated Stripe payment processing with webhook event handling and reconciliation.',
+      'Implemented Pusher for real-time job status updates, live notifications, and dashboard sync.',
       'Developed bulk document processing pipelines handling thousands of files with BullMQ.',
       'Built secure PDF generation, encryption, watermarking, merging, and transformation services.',
-      'Designed event-driven workflows for report generation, invoice processing, and email automation.',
-      'Implemented Azure Blob Storage and File Share for large-scale document management.',
     ],
   },
   {
@@ -176,7 +196,7 @@ export const experiences = [
     accent: '#A855F7',
     highlights: [
       'Delivered production apps with secure REST APIs and authentication systems.',
-      'Built real-time features using WebSockets and event-driven architecture.',
+      'Built real-time features using Pusher, WebSockets, and event-driven architecture.',
       'Improved performance through caching, lazy loading, and SSR/SSG optimization.',
     ],
   },
@@ -191,7 +211,24 @@ export const projects: {
   icon: string;
   liveUrl?: string;
   githubUrl?: string;
+  isPersonal?: boolean;
 }[] = [
+  {
+    title: 'RingCentral App Webhook',
+    description:
+      'Personal NestJS SaaS backend connecting RingCentral accounts via OAuth — fax send/receive, SMS webhooks, and multi-tenant token management.',
+    features: [
+      'OAuth 2.0 with signed state and AES-256-GCM token encryption',
+      'Fax send, list, and real-time status sync via webhooks',
+      'SMS and fax message-store event subscriptions',
+      'Multi-tenant architecture with per-tenant webhook routing',
+    ],
+    tech: ['NestJS', 'TypeScript', 'MySQL', 'RingCentral API', 'Webhooks'],
+    githubUrl: 'https://github.com/mohammad-rasool-shaik/ringcentral-app-webhook',
+    gradient: 'from-orange-600/30 to-amber-600/20',
+    icon: '📠',
+    isPersonal: true,
+  },
   {
     title: 'Enterprise Real Estate Platform',
     description:
@@ -201,8 +238,9 @@ export const projects: {
       'Stripe payments with webhook handling',
       'Bulk PDF processing and secure document storage',
       'Dashboard analytics and report automation',
+      'Real-time updates with Pusher for job and notification sync',
     ],
-    tech: ['NestJS', 'React', 'Azure', 'Stripe', 'Redis', 'BullMQ'],
+    tech: ['NestJS', 'React', 'Azure', 'Stripe', 'Pusher', 'Redis', 'BullMQ'],
     liveUrl: 'https://www.ezroi.net/',
     gradient: 'from-emerald-600/30 to-blue-600/20',
     icon: '🏢',
@@ -235,6 +273,7 @@ export const projects: {
     tech: ['TypeScript', 'AWS Lambda', 'DynamoDB', 'OpenAI', 'EventBridge'],
     gradient: 'from-cyan-600/30 to-teal-600/20',
     icon: '🤖',
+    isPersonal: true,
   },
 ];
 

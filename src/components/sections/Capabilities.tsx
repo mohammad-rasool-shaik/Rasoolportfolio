@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import {
+  FiActivity,
   FiCreditCard,
   FiFileText,
   FiFolder,
   FiLock,
   FiMail,
+  FiPhone,
   FiPieChart,
+  FiRadio,
   FiRefreshCw,
   FiUploadCloud,
 } from 'react-icons/fi';
@@ -23,6 +26,9 @@ const iconMap = {
   reports: FiPieChart,
   workflow: FiRefreshCw,
   security: FiLock,
+  ringcentral: FiPhone,
+  ehr: FiActivity,
+  realtime: FiRadio,
 };
 
 export function Capabilities() {
