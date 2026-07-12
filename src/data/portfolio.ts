@@ -98,6 +98,13 @@ export const capabilities: {
     iconKey: 'email',
   },
   {
+    title: 'AI Meeting Assistant',
+    description:
+      'Built an end-to-end Python workflow for desktop audio capture, upload, transcription, discussion analysis, MOM HTML generation, and email delivery.',
+    tech: ['Python', 'FastAPI', 'OpenAI', 'Pydantic', 'Jinja2', 'SMTP'],
+    iconKey: 'workflow',
+  },
+  {
     title: 'Real-Time with Pusher',
     description:
       'Live dashboards, instant notifications, job status updates, and real-time UI sync using Pusher channels and events across NestJS backends and React frontends.',
@@ -124,7 +131,7 @@ export const techStack = [
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'NestJS', 'Express', 'Pusher'],
+    items: ['Node.js', 'NestJS', 'Express', 'FastAPI', 'Pydantic', 'Pusher'],
   },
   {
     category: 'Database',
@@ -132,7 +139,7 @@ export const techStack = [
   },
   {
     category: 'Integrations',
-    items: ['RingCentral', 'Epic', 'Cerner', 'Stripe'],
+    items: ['RingCentral', 'Epic', 'Cerner', 'Stripe', 'OpenAI', 'SMTP'],
   },
   {
     category: 'Cloud & DevOps',
@@ -273,6 +280,23 @@ export const projects: {
     tech: ['TypeScript', 'AWS Lambda', 'DynamoDB', 'OpenAI', 'EventBridge'],
     gradient: 'from-cyan-600/30 to-teal-600/20',
     icon: '🤖',
+    isPersonal: true,
+  },
+  {
+    title: 'AI Meeting Assistant',
+    description:
+      'A modular Python project for recording meetings, uploading audio, transcribing speech, analyzing discussion, generating MOM HTML, and emailing it professionally.',
+    features: [
+      'Desktop audio recording and WAV export',
+      'FastAPI backend for upload and processing',
+      'OpenAI transcription and discussion analysis',
+      'HTML Minutes of Meeting generation',
+      'SMTP-based MOM email delivery',
+    ],
+    tech: ['Python', 'FastAPI', 'OpenAI', 'Pydantic', 'Jinja2', 'aiosmtplib'],
+    githubUrl: 'https://github.com/mohammad-rasool-shaik/ai-metting-assitant',
+    gradient: 'from-fuchsia-600/30 to-purple-600/20',
+    icon: '🎙️',
     isPersonal: true,
   },
 ];
